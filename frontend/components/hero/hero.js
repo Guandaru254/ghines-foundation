@@ -1,0 +1,88 @@
+import React from "react";
+import { Navigation, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import Link from 'next/link'
+import Image from "next/image";
+
+
+
+
+
+const ClickHandler = () => {
+    window.scrollTo(10, 0);
+}
+
+const Hero = (props) => {
+    return (
+
+        <section className={"" + props.hclass} >
+            <Swiper
+                // install Swiper modules
+                modules={[Navigation, A11y]}
+                spaceBetween={0}
+                slidesPerView={1}
+                loop={true}
+                speed={1800}
+                parallax={true}
+                navigation
+            >
+                <SwiperSlide>
+                    <div className="slide-inner slide-bg-image" style={{ backgroundImage: `url(${'/images/slider/slide-1.jpg'})` }}>
+                        <div className="container-fluid">
+                            <div className="slide-content">
+                                <div className="slide-sub-title">
+                                    <h2>Every Good Deed <span></span> 
+                                    <span className="text">Counts </span></h2>
+                                </div>
+                                <div data-swiper-parallax="500" className="slide-btns">
+                                    <Link onClick={ClickHandler} href="/about" className="theme-btn">Learn More</Link>
+                                    <div className="call">
+                                        <div className="text">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </SwiperSlide>
+               
+                <SwiperSlide>
+                    <div className="slide-inner slide-bg-image" style={{ backgroundImage: `url(${'/images/slider/slide-2.jpg'})` }}>
+                        <div className="container-fluid">
+                            <div className="slide-content">
+                                <div className="slide-title">
+                                    <span>We are always open for children</span>
+                                </div>
+                                <div className="slide-sub-title">
+                                    <h2>Give support
+                                        to <span>poverties</span> & <span className="text">Old </span>
+                                        non profit Care</h2>
+                                </div>
+                                <div data-swiper-parallax="500" className="slide-btns">
+                                    <Link onClick={ClickHandler} href="/about" className="theme-btn">About Us</Link>
+                                    <div className="call">
+                                        <div className="icon">
+                                            <i className="flaticon-phone"></i>
+                                        </div>
+                                        <div className="text">
+                                            <h3>Call Us Now</h3>
+                                            <span>+025 757 576 560</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </SwiperSlide>
+               
+                ...
+            </Swiper>
+        </section>
+    )
+}
+
+export default Hero;
