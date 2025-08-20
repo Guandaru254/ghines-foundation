@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import NewHeader from '../../components/NewHeader'; // Corrected path assuming newheader.js is NewHeader.js
+import NewHeader from '../../components/NewHeader/newheader.js'; // Corrected path assuming newheader.js is NewHeader.js
 import PageTitle from '../../components/pagetitle/PageTitle';
 import AboutS2 from '../../components/about2/about2';
 import TeamSection from '../../components/TeamSection/TeamSection';
