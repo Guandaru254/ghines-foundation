@@ -1,0 +1,133 @@
+/* ==================================
+    New Header Styles - Desktop First
+================================== */
+.new-header {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    
+    .logo-container {
+        flex-shrink: 0;
+        
+        img {
+            height: 60px;
+            width: auto;
+        }
+    }
+
+    .new-nav {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        transition: transform 0.3s ease-in-out;
+        
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            
+            li {
+                a {
+                    text-decoration: none;
+                    color: #000000;
+                    font-weight: bold;
+                    white-space: nowrap;
+
+                    &:hover {
+                        color: #F74F22;
+                    }
+                }
+            }
+        }
+    }
+    
+    .cta-button {
+        flex-shrink: 0;
+        
+        .donate-btn {
+            background-color: #F74F22;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            
+            &:hover {
+                background-color: darken(#F74F22, 10%);
+            }
+        }
+    }
+    
+    .mobile-menu-toggle {
+        display: none; // Hidden on desktop
+    }
+    
+    .logo-mobile {
+        display: none; // Hidden on desktop
+    }
+}
+
+/* ----------------------------------
+    Breakpoints for Mobile devices
+----------------------------------- */
+@media (max-width: 768px) {
+    .new-header {
+        padding: 10px 20px;
+        justify-content: space-between;
+    }
+
+    .logo-container {
+        img {
+            height: 40px; // Smaller logo for mobile
+        }
+    }
+    
+    .new-nav, .cta-button {
+        display: none; // Hide desktop navigation on mobile
+    }
+    
+    .mobile-menu-toggle {
+        display: block; // Show the hamburger icon on mobile
+    }
+    
+    // Mobile side menu styling
+    .new-nav.mobile-menu-active {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 250px;
+        background-color: #f7f7f7;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        transform: translateX(0);
+        transition: transform 0.3s ease-in-out;
+        
+        .logo-mobile {
+            display: block; // Show the logo inside the mobile menu
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        ul {
+            flex-direction: column;
+            width: 100%;
+            li {
+                padding: 15px 20px;
+                border-bottom: 1px solid #ddd;
+                
+                a {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -18,15 +18,15 @@ const BecomeSection = (props) => {
                 <div className="icon">
                     <Image src={Icon1} alt="" />
                 </div>
-                <h2>Become an volunteer?</h2>
-                <Link onClick={ClickHandler} href="/contact">Contact With us <Image src={Arrow} alt="" /></Link>
+                <h2>Become a volunteer</h2>
+                <Link onClick={ClickHandler} href="/contact"> <Image src={Arrow} alt="" /></Link>
             </div>
             <div className="right-content">
                 <div className="icon">
                     <Image src={Icon2} alt="" />
                 </div>
-                <h2>Make donation to us?</h2>
-                <Link onClick={ClickHandler} href="/donate">donation <Image src={Arrow} alt="" /></Link>
+                <h2>Make A Donation</h2>
+                <Link onClick={ClickHandler} href="/donate"> <Image src={Arrow} alt="" /></Link>
             </div>
             <div className="shape">
                 <Image src={Shape} alt="" />

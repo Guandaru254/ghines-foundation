@@ -1,13 +1,12 @@
 import React, { Fragment } from 'react';
 import Link from "next/link";
 import Projects from "../../api/projects";
-import Navbar from '../../components/Navbar/Navbar';
+import NewHeader from '../../components/NewHeader/newheader'; // Import your new header
 import PageTitle from '../../components/pagetitle/PageTitle'
 import Footer from '../../components/footer/Footer';
 import Scrollbar from '../../components/scrollbar/scrollbar';
 import Logo from '/public/images/logo-2.svg'
 import Image from 'next/image';
-
 
 const ProjectPage = () => {
     const ClickHandler = () => {
@@ -16,7 +15,7 @@ const ProjectPage = () => {
 
     return (
         <Fragment>
-            <Navbar hclass={'wpo-site-header'} Logo={Logo} />
+            <NewHeader /> {/* Replace old Navbar with new header */}
             <PageTitle pageTitle={'Gallery'} />
             <section className="project-page section-padding">
                 <div className="container">

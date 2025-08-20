@@ -351,7 +351,18 @@
 
 /* 2.2 navigation */
 
+.my-custom-header {
+  background-color: #ffffff !important;
+}
 
+.my-custom-header .navigation > ul li a {
+  color: #000000 !important;
+}
+
+.sticky-on.my-custom-header {
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
 .wpo-site-header {
 	/* navigation open and close btn hide for width screen */
 	/* style for navigation less than 992px */
@@ -442,9 +453,7 @@
 }
 
 @media screen and (min-width: 992px) {
-	.wpo-site-header #navbar {
-		/*** hover effect ***/
-	}
+	
 
 	.wpo-site-header #navbar li {
 		position: relative;
@@ -494,9 +503,7 @@
 }
 
 @media (max-width: 991px) {
-	.wpo-site-header {
-		/* class for show hide navigation */
-	}
+	
 
 	.wpo-site-header .container {
 		width: 100%;
@@ -2134,17 +2141,24 @@
  color: #ddd;
 }
 
-
 /* ==================================
-       Header style
+    Header style
 ================================== */
 .wpo-site-header {
-    background-color: #fff;
+    background-color: #ffffff !important; // Forces the main header background to white
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 99;
     padding: 20px 0;
 
+    .navigation-outer {
+        background-color: #ffffff !important; // Also force the navigation container to white
+    }
+    
+    .navigation-holder #navbar > ul li a {
+        color: #000000 !important; // Forces the navigation links to black
+    }
+    
     &.sticky-on {
         position: fixed;
         top: 0;
@@ -2154,6 +2168,7 @@
         -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
         padding: 10px 0;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff !important; // Forces the sticky header background to white
     }
 }
 
@@ -2192,7 +2207,6 @@
     gap: 15px; /* Adds space between icons and button */
     flex-shrink: 0; /* Prevents icons from shrinking */
 }
-
 .mini-cart {
     position: relative;
 }
@@ -2217,4 +2231,48 @@
     display: flex;
     align-items: center;
     gap: 15px;
+}
+
+
+/* In your SCSS file for the header */
+
+/* 1. Remove the white space above and below the navbar. */
+/* You may need to inspect the topbar and navigation-outer classes to find what's adding this space. */
+.wpo-site-header {
+    padding-top: 0;
+    padding-bottom: 0;
+    /* Other styling here */
+}
+
+/* This is a crucial part to remove the topbar. */
+/* Based on the screenshot, it seems you have a separate topbar with contact details.
+   This can be removed entirely from the component that renders the header. */
+
+/* 2. Push the nav links to the left. */
+/* Combine the logo and nav links into a single flex container to manage their alignment. */
+.header-main-flex {
+    display: flex;
+    justify-content: space-between; /* This will push the donate button to the right */
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-header-and-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adjust as needed for spacing between logo and nav links */
+}
+
+/* 3. Remove the underline on hover for nav links. */
+.navbar-nav li a {
+    text-decoration: none;
+}
+.navbar-nav li a:hover {
+    text-decoration: none;
+}
+
+/* The provided code also has a .theme-btn for the Donate now link.
+   Make sure its hover state doesn't have an underline either. */
+.theme-btn:hover {
+    text-decoration: none;
 }

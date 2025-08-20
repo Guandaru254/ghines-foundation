@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import Navbar from '../../components/Navbar/Navbar';
+import NewHeader from '../../components/NewHeader/newheader'; // Import your new header
 import PageTitle from '../../components/pagetitle/PageTitle'
 import ServiceSection from '../../components/ServiceSection/ServiceSection';
 import BecomeSection from '../../components/BecomeSection/BecomeSection';
@@ -19,11 +19,10 @@ import Logo from '/public/images/logo-2.svg'
 const ServicePage = () => {
     return (
         <Fragment>
-            <Navbar hclass={'wpo-site-header'} Logo={Logo} />
+            <NewHeader /> {/* Replaced old Navbar with new header */}
             <PageTitle pageTitle={'Our Work'} />
             <ServiceSection />
             <BecomeSection hclass={"become_volunteer"} />
-            <ProjectSectionS2 hclass={'project-section-s2 section-padding'} />
             <Testimonial2 tClass={'testimonial-section-s2 section-padding'} />
             <CtaSectionS2 />
             <Footer />
@@ -32,7 +31,3 @@ const ServicePage = () => {
     )
 };
 export default ServicePage;
-
-
-
-

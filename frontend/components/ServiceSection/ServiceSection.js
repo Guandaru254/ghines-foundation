@@ -1,7 +1,8 @@
 import React from 'react';
-import VideoModal from '../ModalVideo/VideoModal';
 import Link from 'next/link';
-import Services from '../../api/Services';
+// The Services import is no longer needed since we are replacing the data.
+// import Services from '../../api/Services';
+
 import Img1 from '/public/images/service/1.jpg'
 import Img2 from '/public/images/service/2.jpg'
 import Img3 from '/public/images/service/3.jpg'
@@ -14,6 +15,23 @@ const ServiceSection = (props) => {
     const ClickHandler = () => {
         window.scrollTo(10, 0);
     }
+    
+    // We'll define a new array for our services to replace the imported 'Services' data.
+    const ghinesServices = [
+        {
+            title: "Animal Welfare ",
+            icon: "flaticon-bird" 
+        },
+        {
+            title: "Social Services & Human Rights",
+            
+        },
+        {
+            title: "Youth, Sports & Culture",
+            icon: "flaticon-idea" 
+        },
+    ];
+
     return (
         <section className="service-section section-padding">
             <div className="container">
@@ -35,10 +53,13 @@ const ServiceSection = (props) => {
                         <div className="col-lg-5 col-12">
                             <div className="service-left">
                                 <ul>
-                                    {Services.slice(0, 5).map((Service, item) => (
+                                    {/* Using our new 'ghinesServices' array instead of the imported 'Services' */}
+                                    {ghinesServices.map((Service, item) => (
                                         <li key={item}>
-                                            <Link onClick={ClickHandler} href={'/service-single/[slug]'} as={`/service-single/${Service.slug}`}>
-                                            <i className={Service.icon}></i>{Service.title}</Link>
+                                            {/* Changed href to "#" to make the links non-functional */}
+                                            <Link onClick={ClickHandler} href="#" as="#"> 
+                                                <i className={Service.icon}></i>{Service.title}
+                                            </Link>
                                         </li>
                                     ))}
                                 </ul>
@@ -69,8 +90,6 @@ const ServiceSection = (props) => {
                     </div>
                 </div>
             </div>
-
-          
         </section>
     );
 };

@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <div>
       <Head>
-        <title>AidUs – Charity Nonprofit Next Js Template</title>
+        <title>Ghines Foundation</title>
       </Head>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>

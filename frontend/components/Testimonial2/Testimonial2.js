@@ -40,7 +40,7 @@ const Testimonial2 = (props) => {
                                     <div className="content" key={item}>
                                         <p>{testimonial.Des}</p>
                                         <div className="client-name">
-                                            <h4>{testimonial.title}/</h4>
+                                            <h4>{testimonial.title}</h4>
                                             <span>{testimonial.sub}</span>
                                         </div>
                                     </div>
@@ -50,12 +50,7 @@ const Testimonial2 = (props) => {
                     </div>
                 </div>
             </div>
-            <div className="shape">
-                <Image src={Shape} alt="" />
-            </div>
-            <div className="shape-2">
-                <Image src={Shape2} alt="" />
-            </div>
+      
         </section>
     );
 };

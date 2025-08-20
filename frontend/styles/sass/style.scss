@@ -1,7 +1,7 @@
 /*------------------------------------------------------------------
 [Master Stylesheet]
-Theme Name:     AidUs – Charity Nonprofit HTML5 Template
-Version:        1.0.0
+Theme Name:    AidUs – Charity Nonprofit HTML5 Template
+Version:       1.0.0
 -------------------------------------------------------------------*/
 
 
@@ -10,27 +10,27 @@ Version:        1.0.0
 ----------------------------------------------------------------
 
 1. General
-	1.1 Theme Reset Style
-	1.2 Global Elements
+   1.1 Theme Reset Style
+   1.2 Global Elements
 
 2. header
-	2.1 topbar
-	2.2 navigation
+   2.1 topbar
+   2.2 navigation
 
 3. content
-	3.1 wpo-hero-slider
-	3.2 partners
-	3.3 funfact
-	3.4 about 
-	3.5 events
-	3.6 service 
-	3.7 causes
-	3.8 cta
-	3.9 project
-	3.10 testimonial
-	3.11 process
-	3.12 instagam
-	3.13 blog
+   3.1 wpo-hero-slider
+   3.2 partners
+   3.3 funfact
+   3.4 about 
+   3.5 events
+   3.6 service 
+   3.7 causes
+   3.8 cta
+   3.9 project
+   3.10 testimonial
+   3.11 process
+   3.12 instagam
+   3.13 blog
 
 4. wpo-footer
 
@@ -124,8 +124,10 @@ Version:        1.0.0
 @import "components/pagination";
 @import "components/services-sidber";
 
+
 // layout
-@import "layout/header";
+// layout
+@import "layout/_newheader"; // This imports the new header file
 @import "layout/hero-slider";
 @import "layout/footer";
 
@@ -155,7 +157,3 @@ Version:        1.0.0
 
 @import "page/_contact";
 @import "page/_error-404";
-
-
-
-

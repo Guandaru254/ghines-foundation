@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import Navbar from '../../components/Navbar/Navbar'
+import NewHeader from '../../components/NewHeader/newheader'; // New header component imported
 import Hero from '../../components/hero/hero';
 import PartnerSection from '../../components/PartnerSection/PartnerSection';
 import FunFact from '../../components/FunFact/FunFact';
@@ -13,26 +13,25 @@ import InstagamSection from '../../components/InstagamSection/InstagamSection';
 import BlogSection from '../../components/BlogSection/BlogSection';
 import Footer from '../../components/footer/Footer';
 import Scrollbar from '../../components/scrollbar/scrollbar';
-import Logo from '/public/images/logo-2.svg'
 
 const HomePage = () => {
-    return (
-        <Fragment>
-            <Navbar hclass={'wpo-site-header'}  Logo={Logo} />
-            <Hero hclass={'wpo-hero-slider'} />
-            <PartnerSection hclass={'partners-section'} />
-            <FunFact />
-            <About hclass={'about-section section-padding'}/>
-            <ServiceSection  />
-            <CausesSection hclass={"causes-section section-padding pt-0"} />
-            <CtaSection hclass={'cta-section'}/>
-            <ProjectSection hclass={'project-section section-padding'}/> 
-            <ProcessSection />
-            <InstagamSection hclass={'instagam-section section-padding pb-0'}/>
-            <BlogSection tClass={'blog-section section-padding'}/>
-            <Footer />
-            <Scrollbar /> 
-        </Fragment>
-    )
+    return (
+        <Fragment>
+            <NewHeader /> {/* Old Navbar replaced with new component */}
+            <Hero hclass={'wpo-hero-slider'} />
+            <PartnerSection hclass={'partners-section'} />
+            <FunFact />
+            <About hclass={'about-section section-padding'}/>
+            <ServiceSection  />
+            <CausesSection hclass={"causes-section section-padding pt-0"} />
+            <CtaSection hclass={'cta-section'}/>
+            <ProjectSection hclass={'project-section section-padding'}/> 
+            <ProcessSection />
+            <InstagamSection hclass={'instagam-section section-padding pb-0'}/>
+            <BlogSection tClass={'blog-section section-padding'}/>
+            <Footer />
+            <Scrollbar /> 
+        </Fragment>
+    )
 };
 export default HomePage;

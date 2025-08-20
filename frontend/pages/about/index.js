@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import Navbar from '../../components/Navbar/Navbar';
+import NewHeader from '../../components/NewHeader/newheader'; // Import your new header
 import PageTitle from '../../components/pagetitle/PageTitle'
 import AboutS2 from '../../components/about2/about2';
 import FunFactS2 from '../../components/FunFactS2/FunFactS2';
@@ -15,19 +15,16 @@ import Scrollbar from '../../components/scrollbar/scrollbar';
 import Logo from '/public/images/logo-2.svg'
 import BlogSection from '../../components/BlogSection/BlogSection';
 
-
 const AboutPage = () => {
     return (
         <Fragment>
-            <Navbar hclass={'wpo-site-header'} Logo={Logo} />
+            <NewHeader /> {/* Replaced old Navbar with new header */}
             <PageTitle pageTitle={'About Us'} pagesub={'About'} />
             <AboutS2 hclass={'about-section-s4 section-padding'} />
             <TeamSection hclass={'volunteer-section section-padding'} />
-            <PartnerSectionS3 />
             <CtaSection hclass={'cta-section'} />
             <Footer />
             <Scrollbar />
-
         </Fragment>
     )
 };

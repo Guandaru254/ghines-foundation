@@ -17,7 +17,7 @@ const TeamSection = (props) => {
                     <div className="col-lg-6 col-12">
                         <div className="section-title text-center">
                             <span>You Can Help The Poor With Us</span>
-                            <h2>Meat the Team <span>member</span></h2>
+                            <h2>Meet the Team <span></span></h2>
                         </div>
                     </div>
                 </div>
@@ -28,9 +28,8 @@ const TeamSection = (props) => {
                                 <div className="vol-card">
                                     <div className="image">
                                         <Image src={team.timg} alt="" />
-                                        <span className="hover-icon"><i className="flaticon-share"></i></span>
-                                        <ul>
-                                            <li><Link onClick={ClickHandler} href="#"><i className="flaticon-camera"></i></Link></li>
+                                        {/* Social media icons visible by default */}
+                                        <ul className="social-icons-default">
                                             <li><Link onClick={ClickHandler} href="#"><i className="flaticon-facebook-app-symbol"></i></Link></li>
                                             <li><Link onClick={ClickHandler} href="#"><i className="flaticon-linkedin"></i></Link></li>
                                             <li><Link onClick={ClickHandler} href="#"><i className="flaticon-twitter"></i></Link></li>
@@ -45,9 +44,7 @@ const TeamSection = (props) => {
                         ))
                     }
                 </div>
-                <div className="all-btn">
-                    <Link onClick={ClickHandler} href="/volunteer-1" className="theme-btn">All Volunteer</Link>
-                </div>
+              
             </div>
         </section>
     )

@@ -50,34 +50,6 @@ const Hero = (props) => {
                     </div>
                 </SwiperSlide>
                
-                <SwiperSlide>
-                    <div className="slide-inner slide-bg-image" style={{ backgroundImage: `url(${'/images/slider/slide-2.jpg'})` }}>
-                        <div className="container-fluid">
-                            <div className="slide-content">
-                                <div className="slide-title">
-                                    <span>We are always open for children</span>
-                                </div>
-                                <div className="slide-sub-title">
-                                    <h2>Give support
-                                        to <span>poverties</span> & <span className="text">Old </span>
-                                        non profit Care</h2>
-                                </div>
-                                <div data-swiper-parallax="500" className="slide-btns">
-                                    <Link onClick={ClickHandler} href="/about" className="theme-btn">About Us</Link>
-                                    <div className="call">
-                                        <div className="icon">
-                                            <i className="flaticon-phone"></i>
-                                        </div>
-                                        <div className="text">
-                                            <h3>Call Us Now</h3>
-                                            <span>+025 757 576 560</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </SwiperSlide>
                
                 ...
             </Swiper>
