@@ -36,8 +36,8 @@ const NewHeader = () => {
             </nav>
             
             <div className="cta-button">
-                <Link href="/donate" className="donate-btn">
-                    Donate Now
+                <Link href="" className="donate-btn">
+                    Make A Donation
                 </Link>
             </div>
         </header>
