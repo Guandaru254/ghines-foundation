@@ -18,7 +18,7 @@ const Contactpage = () => {
                                 </div>
                                 <div className="office-info-text">
                                     <h2>Our Address</h2>
-                                    <p>Juja, South Sudan</p>
+                                    <p>Juba, South Sudan</p>
                                 </div>
                             </div>
                         </div>
@@ -59,8 +59,7 @@ const Contactpage = () => {
                                 <p>Every action, big or small, counts!</p>
                                 <div className="map">
                                     <iframe
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15957.56843075276!2d37.01257404886638!3d-1.093417937449557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f5e6a9a3b631d%3A0x6a0a80e1a1b1a134!2sJuja%2C%20Kenya!5e0!3m2!1sen!2s!4v1718018440050!5m2!1sen!2s"
-                                        allowFullScreen=""
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127214.99552926265!2d31.494613249122825!3d4.860857434133812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1712804abcf3b5f9%3A0xd89839286346c433!2sJuba%2C%20South%20Sudan!5e0!3m2!1sen!2ske!4v1756109865732!5m2!1sen!2ske" referrerpolicy="no-referrer-when-downgrade"                                        allowFullScreen=""
                                         loading="lazy"
                                         referrerPolicy="no-referrer-when-downgrade"
                                     ></iframe>

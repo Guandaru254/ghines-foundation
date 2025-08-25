@@ -24,7 +24,7 @@ const NewHeader = () => {
             {/* Main desktop navigation */}
             <nav className={`new-nav ${isMenuOpen ? 'mobile-menu-active' : ''}`}>
                 <div className="logo-mobile">
-                    <img src="/images/logo-2.svg" alt="Your Logo" />
+                    <img src="/images/logo.svg" alt="Your Logo" />
                 </div>
                 <ul>
                     <li><Link href="/">Home</Link></li>
