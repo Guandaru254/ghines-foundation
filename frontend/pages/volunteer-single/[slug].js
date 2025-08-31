@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { useRouter } from 'next/router'
 import Teams from '../../api/team';
-import Navbar from '../../components/Navbar/Navbar'
+import NewHeader from '../../components/NewHeader/newheader.js';
 import PageTitle from '../../components/pagetitle/PageTitle'
 import Footer from '../../components/footer/Footer';
 import Scrollbar from '../../components/scrollbar/scrollbar';
@@ -19,7 +19,7 @@ const TeamSinglePage = (props) => {
 
     return (
         <Fragment>
-            <Navbar Logo={logo} hclass={'wpo-site-header'} />
+            <NewHeader/>
             <PageTitle pageTitle={TeamSingles?.title} pagesub={'Team'} />
             <div className="team-pg-area section-padding">
                 <div className="container">

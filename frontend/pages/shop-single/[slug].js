@@ -1,7 +1,7 @@
 import React, {Fragment, useEffect, useState} from 'react';
 import { useRouter } from 'next/router'
 import { connect } from "react-redux";
-import Navbar from '../../components/Navbar/Navbar';
+import NewHeader from '../../components/NewHeader/newheader.js';
 import PageTitle from '../../components/pagetitle/PageTitle'
 import Scrollbar from '../../components/scrollbar/scrollbar'
 import { addToCart } from "../../store/actions/action";
@@ -32,7 +32,7 @@ const ProductSinglePage =(props) => {
 
     return(
         <Fragment>
-            <Navbar hclass={'wpo-site-header'} Logo={Logo} />
+            <NewHeader/>
             <PageTitle pageTitle={'Product Single'} /> 
             <section className="shop-single-section section-padding">
                 <div className="container">

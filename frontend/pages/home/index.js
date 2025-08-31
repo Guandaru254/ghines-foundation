@@ -17,18 +17,18 @@ import Scrollbar from '../../components/scrollbar/scrollbar';
 const HomePage = () => {
     return (
         <Fragment>
-            <NewHeader /> {/* Old Navbar replaced with new component */}
-            <Hero hclass={'wpo-hero-slider'} />
-            <PartnerSection hclass={'partners-section'} />
+            <NewHeader /> 
+            <Hero/>
+            <PartnerSection/>
             <FunFact />
-            <About hclass={'about-section section-padding'}/>
-            <ServiceSection  />
-            <CausesSection hclass={"causes-section section-padding pt-0"} />
-            <CtaSection hclass={'cta-section'}/>
-            <ProjectSection hclass={'project-section section-padding'}/> 
+            <About/>
+            <ServiceSection/>
+            <CausesSection/>
+            <CtaSection/>
+            <ProjectSection/> 
             <ProcessSection />
-            <InstagamSection hclass={'instagam-section section-padding pb-0'}/>
-            <BlogSection tClass={'blog-section section-padding'}/>
+            <InstagamSection/>
+            <BlogSection/>
             <Footer />
             <Scrollbar /> 
         </Fragment>

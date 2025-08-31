@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import Navbar from '../../components/Navbar/Navbar';
+import NewHeader from '../../components/NewHeader/newheader.js'; 
 import PageTitle from '../../components/pagetitle/PageTitle'
 import BecomeVolunteerForm from '../../components/BecomeVolunteerForm/BecomeVolunteerForm'
 import Footer from '../../components/footer/Footer';
@@ -11,7 +11,7 @@ import Image from 'next/image';
 const HomePage4 = () => {
     return (
         <Fragment>
-            <Navbar hclass={'wpo-site-header'} Logo={Logo} />
+            <NewHeader/>
             <PageTitle pageTitle={'Become Volunteer'} />
             <div className="volunteer-area">
                 <div className="volunteer-wrap">

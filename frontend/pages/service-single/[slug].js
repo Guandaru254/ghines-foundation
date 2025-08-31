@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import Navbar from '../../components/Navbar/Navbar'
+import NewHeader from '../../components/NewHeader/newheader.js';
 import PageTitle from '../../components/pagetitle/PageTitle'
 import Scrollbar from '../../components/scrollbar/scrollbar'
 import Accordion from '../../components/Accordion/Accordion';
@@ -24,7 +24,7 @@ const ServiceSinglePage = (props) => {
 
     return (
         <Fragment>
-            <Navbar Logo={logo} hclass={'wpo-site-header'} />
+            <NewHeader/>
             <PageTitle pageTitle={serviceDetails?.title} pagesub={'Service Single'} />
             <section className="service-single-page section-padding">
                 <div className="container">

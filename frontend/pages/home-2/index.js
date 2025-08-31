@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import NavbarS2 from '../../components/NavbarS2/NavbarS2';
+import NewHeader from '../../components/NewHeader/newheader.js';
 import Hero2 from '../../components/hero2/Hero2';
 import RegisterSection from '../../components/RegisterSection/RegisterSection';
 import About2 from '../../components/about2/about2';
@@ -23,19 +23,19 @@ import Logo from '/public/images/logo.svg'
 const HomePage2 = () => {
     return (
         <Fragment>
-            <NavbarS2 hclass={'wpo-site-header'} Logo={Logo} />
+            <NewHeader/>
             <Hero2 />
             <RegisterSection />
-            <About2 hclass={'about-section-s2 section-padding'} />
-            <ServiceSection2 hclass={'service-section-s2 section-padding pb-0'} />
-            <CausesSectionS2 hclass={"causes-section-s2 section-padding"} />
-            <BecomeSection hclass={"become_volunteer"} />
-            <ServiceSection3 hclass={'service-section-s3 section-padding'} />
-            <GetQuateSection hclass={'GetQuate-section section-padding'} />
-            <TeamSection hclass={'volunteer-section section-padding'} />
-            <ProjectSectionS2 hclass={'project-section-s2 section-padding'} />
+            <About2/>
+            <ServiceSection2/>
+            <CausesSectionS2/>
+            <BecomeSection/>
+            <ServiceSection3/>
+            <GetQuateSection/>
+            <TeamSection/>
+            <ProjectSectionS2/>
             <Testimonial2 tClass={'testimonial-section-s2 section-padding'} />
-            <InstagamSectionS2 hclass={'instagam-section-s2 section-padding'} />
+            <InstagamSectionS2/>
             <CtaSectionS2 />
             <PartnerSectionS2 />
             <BlogSectionS2 tClass={'blog-section-s2'} />

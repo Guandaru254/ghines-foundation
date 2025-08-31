@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import Navbar from '../../components/Navbar/Navbar';
+import NewHeader from '../../components/NewHeader/newheader.js';
 import PageTitle from '../../components/pagetitle/PageTitle'
 
 import Footer from '../../components/footer/Footer';
@@ -43,7 +43,7 @@ const EventSinglePage = (props) => {
 
     return (
         <Fragment>
-            <Navbar hclass={'wpo-site-header'} Logo={Logo} />
+            <NewHeader/>
             <PageTitle pageTitle={EventSinglePage?.title} pagesub={'About'} />
             <div className="event-details-area section-padding">
                 <div className="container">

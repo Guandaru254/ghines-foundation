@@ -19,10 +19,10 @@ import Logo from '/public/images/logo-2.svg'
 const ServicePage = () => {
     return (
         <Fragment>
-            <NewHeader /> {/* Replaced old Navbar with new header */}
+            <NewHeader /> 
             <PageTitle pageTitle={'Our Work'} />
             <ServiceSection />
-            <BecomeSection hclass={"become_volunteer"} />
+            <BecomeSection/>
             <Testimonial2 tClass={'testimonial-section-s2 section-padding'} />
             <CtaSectionS2 />
             <Footer />

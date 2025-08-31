@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { useRouter } from 'next/router'
 import Image from 'next/image';
 import causes from '../../api/causes';
-import Navbar from '../../components/Navbar/Navbar'
+import NewHeader from '../../components/NewHeader/newheader.js';
 import PageTitle from '../../components/pagetitle/PageTitle'
 import Footer from '../../components/footer/Footer';
 import Scrollbar from '../../components/scrollbar/scrollbar';
@@ -25,7 +25,7 @@ const CausesSinglePage = () => {
 
     return (
         <Fragment>
-            <Navbar hclass={'wpo-site-header'} Logo={Logo} />
+            <NewHeader/>
             <PageTitle pageTitle={CausesSingle?.title} />
             <div className="case-details-area section-padding">
                 <div className="container">

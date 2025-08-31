@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import Navbar from '../../components/Navbar/Navbar';
+import NewHeader from '../../components/NewHeader/newheader.js';
 import PageTitle from "../../components/pagetitle/PageTitle";
 import CheckoutSection from '../../components/CheckoutSection'
 import Scrollbar from '../../components/scrollbar/scrollbar'
@@ -10,7 +10,7 @@ import Logo from '/public/images/logo-2.svg';
 const CheckoutPage =({cartList}) => {
     return(
         <Fragment>
-            <Navbar hclass={'wpo-site-header'} Logo={Logo} />
+            <NewHeader/>
             <PageTitle pageTitle={'Checkout'} pagesub={'Checkout'}/> 
             <CheckoutSection cartList={cartList}/>
             <Footer/>

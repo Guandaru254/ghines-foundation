@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import Navbar from '../../components/Navbar/Navbar'
+import NewHeader from '../../components/NewHeader/newheader.js';
 import PageTitle from '../../components/pagetitle/PageTitle'
 import Scrollbar from '../../components/scrollbar/scrollbar'
 import Projects from '../../api/projects';
@@ -24,7 +24,7 @@ const ProjectSingle = (props) => {
 
     return (
         <Fragment>
-            <Navbar Logo={logo} hclass={'wpo-site-header'} />
+            <NewHeader/>
             <PageTitle pageTitle={ProjectSingle?.title}  />
             <section className="project-single-page section-padding">
                 <div className="container">

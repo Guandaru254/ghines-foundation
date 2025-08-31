@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import Navbar from '../../components/Navbar/Navbar';
+import NewHeader from '../../components/NewHeader/newheader.js';
 import PageTitle from "../../components/pagetitle/PageTitle";
 import Scrollbar from "../../components/scrollbar/scrollbar";
 import { Grid } from "@mui/material";
@@ -23,7 +23,7 @@ const CartPage = (props) => {
 
   return (
     <Fragment>
-      <Navbar hclass={'wpo-site-header'} Logo={Logo} />
+      <NewHeader/>
       <PageTitle pageTitle={"Cart"} pagesub={"Cart"} />
       <div className="cart-area section-padding">
         <div className="container">

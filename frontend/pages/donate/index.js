@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useRef } from 'react';
 import SimpleReactValidator from 'simple-react-validator';
-import Navbar from '../../components/Navbar/Navbar';
+import NewHeader from '../../components/NewHeader/newheaader.js';
 import PageTitle from '../../components/pagetitle/PageTitle';
 import Footer from '../../components/footer/Footer';
 import Scrollbar from '../../components/scrollbar/scrollbar';
@@ -71,7 +71,7 @@ const DonatePage = () => {
 
     return (
         <Fragment>
-            <Navbar hclass={'wpo-site-header'} Logo={Logo} />
+            <NewHeader/>
             <PageTitle pageTitle={'Donate Now'} />
             <div className="donation-page-area section-padding">
                 <div className="container">

@@ -9,7 +9,7 @@ import Logo from '/public/images/logo-2.svg'
 const ContactPage = () => {
     return (
         <Fragment>
-            <NewHeader /> {/* Replaced old Navbar with new header */}
+            <NewHeader /> 
             <PageTitle pageTitle={'Contact Us'} pagesub={'Contact'} />
             <Contactpage />
             <Footer />

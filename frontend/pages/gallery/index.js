@@ -15,7 +15,7 @@ const ProjectPage = () => {
 
     return (
         <Fragment>
-            <NewHeader /> {/* Replace old Navbar with new header */}
+            <NewHeader /> 
             <PageTitle pageTitle={'Gallery'} />
             <section className="project-page section-padding">
                 <div className="container">

@@ -5,7 +5,7 @@ import Scrollbar from '../../components/scrollbar/scrollbar'
 import { addToCart } from "../../store/actions/action";
 import ShopProduct from '../../components/ShopProduct';
 import api from "../../api";
-import Navbar from '../../components/Navbar/Navbar';
+import NewHeader from '../../components/NewHeader/newheader.js';
 import Footer from '../../components/footer/Footer';
 
 import Logo from '/public/images/logo-2.svg'
@@ -22,7 +22,7 @@ const ShopPage = ({ addToCart }) => {
 
     return (
         <Fragment>
-            <Navbar hclass={'wpo-site-header'} Logo={Logo} />
+            <NewHeader/>
             <PageTitle pageTitle={'Shop'} />
             <section className="shop-page section-padding">
                 <div className="container">

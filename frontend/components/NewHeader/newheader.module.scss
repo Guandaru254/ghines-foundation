@@ -1,0 +1,156 @@
+/* newheader.module.scss */
+
+.newHeader {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+.newHeader .mobileMenuToggle,
+.newHeader .mobileMenuClose,
+.newHeader .logoMobile {
+    display: none;
+}
+
+.logoContainer img { height: 120px; }
+
+.newNav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.newNav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.newNav ul li a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 500;
+    font-size: 16px;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.newNav ul li a:hover {
+    color: #F74F22;
+}
+
+.ctaButton .donateBtn {
+    background-color: #F74F22;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.ctaButton .donateBtn:hover {
+    background-color: #d13c18;
+}
+
+/* --- TABLET STYLES --- */
+@media (max-width: 1024px) {
+    .newHeader {
+        padding: 15px 40px;
+    }
+    .logoContainer img {
+        height: 100px;
+    }
+    .newNav ul {
+        gap: 20px;
+    }
+}
+
+/* --- MOBILE STYLES --- */
+@media (max-width: 768px) {
+    .newHeader {
+        padding: 10px 20px;
+    }
+    
+    .newHeader .logoContainer {
+        display: none;
+    }
+    
+    .newHeader .newNav,
+    .newHeader .ctaButton {
+        display: none;
+    }
+    
+    .newHeader .mobileMenuToggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #333;
+        margin-left: auto; /* Pushes the button to the right */
+    }
+    
+    .newHeader .newNav.mobileMenuActive {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 250px;
+        background-color: #ffffff;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        transform: translateX(0);
+    }
+    
+    .newHeader .logoMobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .newHeader .logoMobile img {
+        height: 40px;
+    }
+    
+    .newHeader .mobileMenuClose {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #333;
+    }
+    
+    .newHeader .newNav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        align-items: flex-start;
+    }
+
+    .newHeader .newNav ul li {
+        padding: 15px 20px;
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+    }
+    
+    .newHeader .newNav ul li:last-child {
+        border-bottom: none;
+    }
+}

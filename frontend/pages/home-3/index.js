@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import NavbarS3 from '../../components/NavbarS3/NavbarS3'
+import NewHeader from '../../components/NewHeader/newheader.js';
 import Hero3 from '../../components/hero3/hero3';
 import FeaturesSection from '../../components/FeaturesSection/FeaturesSection';
 import About3 from '../../components/about3/about3';
@@ -22,20 +22,20 @@ import Logo from '/public/images/logo.svg'
 const HomePage3 = () => {
     return (
         <Fragment>
-            <NavbarS3 hclass={'wpo-site-header'} Logo={Logo} />
+            <NewHeader/>
             <Hero3 />
             <FeaturesSection />
-            <About3 hclass={'about-section-s3 section-padding'} />
-            <FunFactS2 hclass={'funfact-section-s2'} />
-            <ServiceSection4 hclass={"service-section-s5 section-padding"} />
+            <About3/>
+            <FunFactS2/>
+            <ServiceSection4/>
             <CausesSectionS3 />
-            <GetQuateSectionS2 hclass={"get-quate-section-s2 section-padding"} />
-            <ProcessSectionS3 hclass={"process-section-s3 section-padding"} />
+            <GetQuateSectionS2/>
+            <ProcessSectionS3/>
             <PartnerSectionS3 />
-            <TeamSectionS2 hclass={'volunteer-section-s2 section-padding'} />
+            <TeamSectionS2/>
             <TestimonialS3 />
             <BlogSectionS3 />
-            <BecomeSectionS2 hclass={"become_volunteer become_volunteer-s2"} />
+            <BecomeSectionS2/>
             <MapSection />
             <FooterS3 />
             <Scrollbar />

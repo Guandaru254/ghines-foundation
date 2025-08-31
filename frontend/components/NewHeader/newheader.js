@@ -1,5 +1,7 @@
+// NewHeader.jsx
 import React, { useState } from 'react';
 import Link from 'next/link';
+import styles from './newheader.module.scss';
 
 const NewHeader = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,35 +10,40 @@ const NewHeader = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
+
     return (
-        <header className="new-header">
-            <div className="logo-container">
+        <header className={styles.newHeader}>
+            <div className={styles.logoContainer}>
                 <Link href="/">
                     <img src="/images/logo-2.svg" alt="Your Logo" />
                 </Link>
             </div>
             
-            {/* Mobile menu toggle button */}
-            <button className="mobile-menu-toggle" onClick={toggleMenu}>
+            <button className={styles.mobileMenuToggle} onClick={toggleMenu}>
                 <i className="fa fa-bars"></i>
             </button>
 
-            {/* Main desktop navigation */}
-            <nav className={`new-nav ${isMenuOpen ? 'mobile-menu-active' : ''}`}>
-                <div className="logo-mobile">
+            <nav className={`${styles.newNav} ${isMenuOpen ? styles.mobileMenuActive : ''}`}>
+                <div className={styles.logoMobile}>
                     <img src="/images/logo.svg" alt="Your Logo" />
+                    <button className={styles.mobileMenuClose} onClick={closeMenu}>
+                        <i className="fa fa-times"></i>
+                    </button>
                 </div>
                 <ul>
-                    <li><Link href="/">Home</Link></li>
-                    <li><Link href="/about">About Us</Link></li>
-                    <li><Link href="/services">Our Work</Link></li>
-                    <li><Link href="/gallery">Gallery</Link></li>
-                    <li><Link href="/contact">Contact</Link></li>
+                    <li><Link href="/" onClick={closeMenu}>Home</Link></li>
+                    <li><Link href="/about" onClick={closeMenu}>About Us</Link></li>
+                    <li><Link href="/services" onClick={closeMenu}>Our Work</Link></li>
+                    <li><Link href="/gallery" onClick={closeMenu}>Gallery</Link></li>
+                    <li><Link href="/contact" onClick={closeMenu}>Contact</Link></li>
                 </ul>
             </nav>
             
-            <div className="cta-button">
-                <Link href="" className="donate-btn">
+            <div className={styles.ctaButton}>
+                <Link href="" className={styles.donateBtn}>
                     Make A Donation
                 </Link>
             </div>

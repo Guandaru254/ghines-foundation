@@ -20,7 +20,7 @@ import Logo from '/public/images/logo-2.svg';
 const HomePage = () => {
     return (
         <Fragment>
-            <NewHeader /> {/* Replaced old Navbar with new header */}
+            <NewHeader /> 
             <Hero hclass={'wpo-hero-slider'} />
             {/* <PartnerSection hclass={'partners-section'} /> */}
             {/* <FunFact /> */}

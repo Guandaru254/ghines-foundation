@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
-import Navbar from '../../components/Navbar/Navbar'
-import PageTitle from '../../components/pagetitle/PageTitle'
+import NewHeader from '../../components/NewHeader/newheader.js'; import PageTitle from '../../components/pagetitle/PageTitle'
 import Scrollbar from '../../components/scrollbar/scrollbar'
 import { useRouter } from 'next/router'
 import blogs from '../../api/blogs'
@@ -16,7 +15,7 @@ const BlogDetails = (props) => {
 
     return (
         <Fragment>
-            <Navbar Logo={logo} hclass={'wpo-site-header'} />
+            <NewHeader/>
             <PageTitle pageTitle={BlogDetails?.title} pagesub={'Blog'} />
             <BlogSingle />
             <Footer />

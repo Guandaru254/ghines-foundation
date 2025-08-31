@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { useRouter } from 'next/router'
 import blogs from '../../api/blogs'
-import Navbar from '../../components/Navbar/Navbar';
+import NewHeader from '../../components/NewHeader/newheader.js'; 
 import PageTitle from '../../components/pagetitle/PageTitle'
 import BlogSingle from '../../components/BlogDetails/BlogSingle'
 import Scrollbar from '../../components/scrollbar/scrollbar'
@@ -15,7 +15,7 @@ const BlogDetailsFull = () => {
     const BlogDetails = blogs.find(item => item.slug === router.query.slug)
     return (
         <Fragment>
-            <Navbar Logo={logo} hclass={'wpo-site-header'} />
+            <NewHeader/>
             <PageTitle pageTitle={BlogDetails?.title} pagesub={'Blog'} />
             <BlogSingle blLeft={'d-none'} blRight={'col-lg-10 offset-lg-1'} />
             <Footer />
