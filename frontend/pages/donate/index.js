@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useRef } from 'react';
 import SimpleReactValidator from 'simple-react-validator';
-import NewHeader from '../../components/NewHeader/newheaader.js';
+import NewHeader from '../../components/NewHeader/newheader.js';
 import PageTitle from '../../components/pagetitle/PageTitle';
 import Footer from '../../components/footer/Footer';
 import Scrollbar from '../../components/scrollbar/scrollbar';

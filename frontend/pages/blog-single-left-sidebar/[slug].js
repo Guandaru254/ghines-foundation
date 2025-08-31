@@ -17,7 +17,7 @@ const BlogDetailsLeftSiide = () => {
 
     return (
         <Fragment>
-            <NewHeader>
+            <NewHeader/>
             <PageTitle pageTitle={BlogDetails?.title} pagesub={'Blog'} />
             <BlogSingle blLeft={'order-lg-1'} blRight={'order-lg-2'} blSclass={'blog-single-left-sidebar-section'} />
             <Footer />
