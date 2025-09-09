@@ -9,7 +9,7 @@ const AboutPage = () => {
     return (
         <Fragment>
             <NewHeader />
-            <PageTitle pageTitle={'Board of Directors'} pagesub={'About'} />
+            <PageTitle pageTitle={'The Ghines Foundation Board'} pagesub={'About'} />
             <TeamSection hclass={'volunteer-section section-padding'} />
             <Footer />
             <Scrollbar />

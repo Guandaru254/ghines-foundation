@@ -16,8 +16,16 @@ const TeamSection = (props) => {
                 <div className="row justify-content-center">
                     <div className="col-lg-6 col-12">
                         <div className="section-title text-center">
-                            <span>Meet Our</span>
-                            <h2>Board of Directors <span></span></h2>
+                            <span>Introduction</span>
+                            <h6 className="board-intro mt-4  "   >Our Board of Directors oversees the legal and strategic direction of the Ghines Foundation
+                                . They are responsible for approving the annual goals, strategy, and operating budgets. 
+                                The Board ensures the Foundation’s work remains aligned with its mission and values, 
+                                while maintaining transparency and accountability.
+                                The Chair and Directors collaborate across thematic areas: animal welfare, 
+                                youth development, cultural preservation, and social healing to ensure 
+                                coherence and long-term vision across all programs.
+                           </h6>
+                            
                         </div>
                     </div>
                 </div>

@@ -28,7 +28,6 @@ const BlogList = (props) => {
                                     <div className="entry-meta">
                                         <ul>
                                             <li><i className="fi flaticon-user"></i> By <Link onClick={ClickHandler} href={'/blog-single/[slug]'} as={`/blog-single/${blog.slug}`}>{blog.author}</Link> </li>
-                                            <li><i className="fi ti-comment-alt"></i> Comments {blog.comment} </li>
                                             <li><i className="fi flaticon-clock"></i><Link onClick={ClickHandler} href={'/blog-single/[slug]'} as={`/blog-single/${blog.slug}`}>3 min Read</Link>
                                             </li>
                                         </ul>
@@ -36,7 +35,6 @@ const BlogList = (props) => {
                                     <div className="entry-details">
                                         <h3><Link onClick={ClickHandler} href={'/blog-single/[slug]'} as={`/blog-single/${blog.slug}`}>{blog.title2}</Link></h3>
                                         {/* Updated the placeholder paragraph with a brief from the brief */}
-                                        <p>This section will highlight Youth Voices, Project Spotlights, Cultural Snapshots, and Partner Features. Each post will be a unique story from the ground.</p>
                                         <Link onClick={ClickHandler} href={'/blog-single/[slug]'} as={`/blog-single/${blog.slug}`} className="read-more">READ MORE...</Link>
                                     </div>
                                 </div>

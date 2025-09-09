@@ -83,7 +83,6 @@ const CausesSection = (props) => {
                                 <div className="progress-item">
                                     <div className="progress">
                                         <div className="bar" style={{ width: `${causesData.progress}%` }}>
-                                            <span className="cssProgress-label">{causesData.progress}%</span>
                                         </div>
                                     </div>
                                 </div>

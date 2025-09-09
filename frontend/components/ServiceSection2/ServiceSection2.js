@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Img1 from '/public/images/service/1.jpg'
 import Img2 from '/public/images/service/2.jpg'
 import Img3 from '/public/images/service/3.jpg'
+import Img4 from '/public/images/service/4.jpg'
 import shape from '/public/images/service/shape-1.svg'
 import shape2 from '/public/images/service/shape-2.svg'
 import Image from 'next/image';
@@ -89,7 +90,7 @@ const ServiceSection = (props) => {
                         <div className="col-lg-7 col-12">
                             <div className="service-image">
                                 <ul>
-                                    <li><Image src={Img1} alt="" /></li>
+                                    <li><Image src={Img4} alt="" /></li>
                                     <li><Image src={Img2} alt="" /></li>
                                     <li><Image src={Img3} alt="" /></li>
                                 </ul>

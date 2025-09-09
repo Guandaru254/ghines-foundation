@@ -7,102 +7,81 @@
     align-items: center;
     padding: 20px 80px; 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 10;
 }
 
-.newHeader .mobileMenuToggle,
-.newHeader .mobileMenuClose,
-.newHeader .logoMobile {
-    display: none;
-}
-
-.logoContainer img { height: 120px; }
-
-.newNav {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    transition: transform 0.3s ease-in-out;
-}
-
-.newNav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.newNav ul li a {
-    text-decoration: none;
-    color: #333333;
-    font-weight: 500;
-    font-size: 16px;
-    white-space: nowrap;
-    transition: color 0.3s ease;
-}
-
-.newNav ul li a:hover {
-    color: #F74F22;
-}
-
-.ctaButton .donateBtn {
-    background-color: #F74F22;
-    color: #fff;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 50px;
-    transition: background-color 0.3s ease;
-    font-weight: 600;
-    white-space: nowrap;
-}
-
-.ctaButton .donateBtn:hover {
-    background-color: #d13c18;
-}
-
-/* --- TABLET STYLES --- */
-@media (max-width: 1024px) {
-    .newHeader {
-        padding: 15px 40px;
+/* --- DESKTOP STYLES --- */
+.desktopHeader {
+    .logoContainer {
+        display: flex;
+        align-items: center;
+        img { 
+            height: 120px; 
+        }
     }
-    .logoContainer img {
-        height: 100px;
+    .newNav {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        li a {
+            text-decoration: none;
+            color: #333333;
+            font-weight: 500;
+            font-size: 13.5px;
+            white-space: nowrap;
+            transition: color 0.3s ease;
+            &:hover {
+                color: #4A9FDA;
+            }
+        }
     }
-    .newNav ul {
-        gap: 20px;
+    .ctaButton .donateBtn {
+        background-color: #4A9FDA;
+        color: #fff;
+        padding: 12px 25px;
+        text-decoration: none;
+        border-radius: 50px;
+        transition: background-color 0.3s ease;
+        font-weight: 600;
+        white-space: nowrap;
+        &:hover {
+            background-color: #d13c18;
+        }
     }
 }
 
 /* --- MOBILE STYLES --- */
-@media (max-width: 768px) {
-    .newHeader {
-        padding: 10px 20px;
+.mobileHeader {
+    padding: 10px 20px;
+    .mobileLogoAndToggle {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
     }
-    
-    .newHeader .logoContainer {
-        display: none;
+    .logoMobileHeader img {
+        height: 60px;
     }
-    
-    .newHeader .newNav,
-    .newHeader .ctaButton {
-        display: none;
-    }
-    
-    .newHeader .mobileMenuToggle {
+    .mobileMenuToggle {
         display: block;
         background: none;
         border: none;
         font-size: 24px;
         cursor: pointer;
         color: #333;
-        margin-left: auto; /* Pushes the button to the right */
     }
-    
-    .newHeader .newNav.mobileMenuActive {
-        display: flex;
+    .newNav {
+        display: none;
         flex-direction: column;
         justify-content: flex-start;
         position: fixed;
@@ -113,22 +92,24 @@
         background-color: #ffffff;
         box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
         z-index: 1000;
-        transform: translateX(0);
+        transition: right 0.3s ease-in-out;
+        transform: translateX(100%);
     }
-    
-    .newHeader .logoMobile {
+    .newNav.mobileMenuActive {
+        transform: translateX(0);
+        display: flex;
+    }
+    .logoMobile {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 20px;
         border-bottom: 1px solid #ddd;
+        img {
+            height: 40px;
+        }
     }
-    
-    .newHeader .logoMobile img {
-        height: 40px;
-    }
-    
-    .newHeader .mobileMenuClose {
+    .mobileMenuClose {
         display: block;
         background: none;
         border: none;
@@ -136,21 +117,50 @@
         cursor: pointer;
         color: #333;
     }
-    
-    .newHeader .newNav ul {
+    .newNav ul {
         flex-direction: column;
         width: 100%;
         gap: 0;
         align-items: flex-start;
+        li {
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+            width: 100%;
+        }
+        li:last-child {
+            border-bottom: none;
+        }
     }
+}
 
-    .newHeader .newNav ul li {
-        padding: 15px 20px;
-        border-bottom: 1px solid #ddd;
-        width: 100%;
+/* --- Hiding desktop elements on mobile and vice versa --- */
+@media (max-width: 768px) {
+  .desktopHeader {
+    display: none;
+  }
+  .mobileHeader {
+    display: flex;
+  }
+}
+
+@media (min-width: 769px) {
+  .desktopHeader {
+    display: flex;
+  }
+  .mobileHeader {
+    display: none;
+  }
+}
+
+/* --- Tablet styles (1024px and below, but above 768px) --- */
+@media (max-width: 1024px) {
+    .newHeader {
+        padding: 15px 40px;
     }
-    
-    .newHeader .newNav ul li:last-child {
-        border-bottom: none;
+    .logoContainer img {
+        height: 100px;
+    }
+    .newNav ul {
+        gap: 20px;
     }
 }

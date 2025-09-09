@@ -1,33 +1,69 @@
 import React, { Fragment } from 'react';
-import NewHeader from '../../components/NewHeader/newheader'; // Import your new header
+import Link from 'next/link';
+import NewHeader from '../../components/NewHeader/newheader.js';
 import PageTitle from '../../components/pagetitle/PageTitle'
-import ServiceSection from '../../components/ServiceSection/ServiceSection';
-import BecomeSection from '../../components/BecomeSection/BecomeSection';
-import ServiceSection3 from '../../components/ServiceSection3/ServiceSection3';
-import ProjectSectionS2 from '../../components/ProjectSectionS2/ProjectSectionS2';
-import InstagamSectionS2 from '../../components/InstagamSectionS2/InstagamSectionS2';
-import Testimonial2 from '../../components/Testimonial2/Testimonial2';
-import CtaSectionS2 from '../../components/CtaSectionS2/CtaSectionS2';
-import PartnerSectionS2 from '../../components/PartnerSectionS2/PartnerSectionS2';
-import BlogSectionS2 from '../../components/BlogSectionS2/BlogSectionS2';
-import CtaSectionS3 from '../../components/CtaSectionS3/CtaSectionS3';
 import Footer from '../../components/footer/Footer';
 import Scrollbar from '../../components/scrollbar/scrollbar';
 import Logo from '/public/images/logo-2.svg'
+import causes from '../../api/causes';
+import Image from 'next/image';
 
+const CausesPage = () => {
+    const ClickHandler = () => {
+        window.scrollTo(10, 0);
+    }
 
-const ServicePage = () => {
     return (
         <Fragment>
-            <NewHeader /> 
+            <NewHeader/>
             <PageTitle pageTitle={'Our Work'} />
-            <ServiceSection />
-            <BecomeSection/>
-            <Testimonial2 tClass={'testimonial-section-s2 section-padding'} />
-            <CtaSectionS2 />
+            <section className="cause-pg-section section-padding">
+                <div className="container">
+                    <div className="row">
+                        {causes.slice(0, 6).map((causesData, item) => (
+                            <div className="col-lg-4 col-md-6 col-12" key={item}>
+                                <div className="causes-card" >
+                                    <div className="image">
+                                        <span>{causesData.tag}</span>
+                                        <Image src={causesData.Cimg} alt="" />
+                                    </div>
+                                    <div className="text">
+                                        <h2><Link onClick={ClickHandler} href={'/causes-single/[slug]'} as={`/causes-single/${causesData.slug}`}>{causesData.title}</Link></h2>
+                                        <p>{causesData.docomunt}</p>
+                                    </div>
+                                    <div className="progress-wrap">
+                                        <div className="progress-item">
+                                            <div className="progress">
+                                                <div className="bar" style={{ width: `${causesData.progress}%` }}>
+                                                    <span className="cssProgress-label">{causesData.progress}%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <span className="title">Goal:</span>
+                                                <span>${causesData.goal}</span>
+                                            </li>
+                                            <li>
+                                                <span className="title">Raised:</span>
+                                                <span>${causesData.raised}</span>
+                                            </li>
+                                            <li>
+                                                <span className="title">Goal:</span>
+                                                <span>${causesData.targetGoal}</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
             <Footer />
             <Scrollbar />
+
         </Fragment>
     )
 };
-export default ServicePage;
+export default CausesPage;
