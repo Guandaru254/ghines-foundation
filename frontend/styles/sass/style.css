@@ -1855,10 +1855,10 @@ img {
   .wpo-hero-slider,
   .static-hero,
   .wpo-hero-slider-s2 {
-    height: 100%;
+    /* The hero section needs a fixed height on smaller screens to be visible. */
+    height: 700px;
   }
-}
-.wpo-hero-slider .swiper-slide,
+}.wpo-hero-slider .swiper-slide,
 .static-hero .swiper-slide,
 .wpo-hero-slider-s2 .swiper-slide {
   overflow: hidden;
@@ -4915,7 +4915,7 @@ img {
   margin: 0 auto;
 }
 .cta-section .content span {
-  color: #F74F22;
+  color: #4A9FDA;
   font-family: "Edu AU VIC WA NT Hand", system-ui;
   font-size: 20px;
   font-weight: 600;

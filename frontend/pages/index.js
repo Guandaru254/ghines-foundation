@@ -21,7 +21,7 @@ const HomePage = () => {
     return (
         <Fragment>
             <NewHeader /> 
-            <Hero hclass={'wpo-hero-slider'} />
+            <Hero/>
             {/* <PartnerSection hclass={'partners-section'} /> */}
             {/* <FunFact /> */}
             {/* <About hclass={'about-section section-padding'}/> */}

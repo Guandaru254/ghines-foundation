@@ -19,7 +19,7 @@ const ServiceSection = (props) => {
     // We'll define a new array for our services to replace the imported 'Services' data.
     const ghinesServices = [
         {
-            title: "Animal Welfare ",
+            title: "Animal Welfare & Conservation",
             icon: "flaticon-bird" 
         },
         {

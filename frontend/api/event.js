@@ -15,7 +15,7 @@ import esing3 from '/public/images/events-single/3.jpg'
 const event = [
     {
         id: '1',
-        title: 'Animal Welfare.',
+        title: 'Animal Welfare & Conservation.',
         subtitle: 'Help The Poor, You Will Feel Happy',
         docomunt: 'Quis id at rhoncus consequat. Aliquam in. Velit phasellus augue tristique integer arcu. Elit sed vestibulum tristique suspendisse ut sit',
         slug: 'Custom-Fabrication',
