@@ -35,9 +35,12 @@ const NewHeader = () => {
                 </div>
                 <ul>
                     <li><Link href="/" onClick={closeMenu}>Home</Link></li>
-                    <li><Link href="/about" onClick={closeMenu}>About Us</Link></li>
+                    <li><Link href="/about" onClick={closeMenu}>Who We Are</Link></li>
                     <li><Link href="/services" onClick={closeMenu}>Our Work</Link></li>
+                     <li><Link href="/board" onClick={closeMenu}>Board of Directors</Link></li>
+                     <li><Link href="/gallery" onClick={closeMenu}>Resources</Link></li>
                     <li><Link href="/gallery" onClick={closeMenu}>Gallery</Link></li>
+                    <li><Link href="/blog" onClick={closeMenu}>News & Updates</Link></li>
                     <li><Link href="/contact" onClick={closeMenu}>Contact</Link></li>
                 </ul>
             </nav>

@@ -24,67 +24,68 @@ import recent1 from "/public/images/recent-posts/img-1.jpg";
 import recent2 from "/public/images/recent-posts/img-2.jpg";
 import recent3 from "/public/images/recent-posts/img-3.jpg";
 
-
-
-
 const blogs = [
     {
         id: '1',
-        title: 'Caring for the Elderly and Vulnerable Strategy.',
-        title2: 'Budget Issues Force The Our To Become',
-        subtitle: 'Manik Doe',
-        slug: 'Why-Industry-Are-A-Juicy-Target-For-Cyberattack',
+        title: 'Youth Voices',
+        title2: 'A New Generation Speaks: The Voices of Juba’s Youth',
+        subtitle: 'Guandaru Kimathi',
+        slug: 'a-new-generation-speaks-youth-voices',
         screens: blogImg1,
         link: 'READ MORE',
-        description: 'Business is the activity of making one s liv cing or buying and selling products',
-        author: 'Manik Doe',
+        description: 'An inspiring look into how young South Sudanese leaders are using digital storytelling to shape their future and preserve cultural heritage.',
+        author: 'Guandaru Kimathi',
         create_at: '01-05-2025',
         blogSingleImg: blogSingleImg1,
         recent: recent1,
-        comment: '35',
-        day: '28',
-        month: 'MAR',
+        comment: '12',
+        day: '15',
+        month: 'AUG',
         blClass: 'format-standard-image',
+        category: 'Youth Voices',
         animation: '1200',
     },
     {
         id: '2',
-        title: 'Varying complexity, provide long-term guarantees',
-        title2: 'The Best Products That Shape Fashion.',
-        subtitle: 'Manik Doe',
-        slug: 'Why-Industry-Are-A-Juicy-Target-For-Cyberattack2',
+        title: 'Project Spotlight',
+        title2: 'Healing with Animals: The First Mobile Veterinary Clinic',
+        subtitle: 'Jane Smith',
+        slug: 'healing-with-animals-mobile-clinic',
         screens: blogImg2,
         link: 'READ MORE',
-        description: 'Business is the activity of making one s liv cing or buying and selling products',
-        author: 'Linda Johns',
-        create_at: '01-05-2025',
+        description: 'Our pilot mobile veterinary clinic is bringing essential care to rural communities, promoting animal welfare and public health through a "One Health" approach.',
+        author: 'Jane Smith',
+        create_at: '05-09-2025',
         blogSingleImg: blogSingleImg2,
         recent: recent2,
-        comment: '35',
-        day: '28',
-        month: 'MAR',
+        comment: '8',
+        day: '09',
+        month: 'SEP',
         blClass: 'format-standard-image',
+        category: 'Project Spotlight',
         animation: '1200',
     },
     {
         id: '3',
-        title: 'Our Goal Is Help The Poor Child Around The World',
-        title2: 'The Best Products That Shape Fashion',
-        subtitle: 'Manik Doe',
-        slug: 'Why-Industry-Are-A-Juicy-Target-For-Cyberattack3',
+        title: 'Cultural Snapshot',
+        title2: 'The Rhythm of the Nile: Celebrating South Sudanese Culture',
+        subtitle: 'Lucy Ghines',
+        slug: 'rhythm-of-the-nile-cultural-snapshot',
         screens: blogImg3,
         link: 'READ MORE',
-        description: 'Business is the activity of making one s liv cing or buying and selling products',
-        author: 'Manik Doe',
-        create_at: '01-05-2025',
+        description: 'A look at how traditional music and dance are helping communities reconnect and heal from the scars of conflict. This is a story of resilience.',
+        author: 'Lucy Ghines',
+        create_at: '10-06-2025',
         blogSingleImg: blogSingleImg3,
         recent: recent3,
-        comment: '35',
-        day: '28',
-        month: 'MAR',
+        comment: '22',
+        day: '20',
+        month: 'JUN',
         blClass: 'format-standard-image',
+        category: 'Cultural Snapshot',
         animation: '1200',
     },
+    // You can add more blog posts here using the same structure
     {
         id: '4',
         title: 'Varying complexity, provide long-term guarantees',
@@ -239,11 +240,6 @@ const blogs = [
         blClass: 'format-standard-image',
         animation: '1200',
     },
- 
-
-
 ];
+
 export default blogs;
-
-
-

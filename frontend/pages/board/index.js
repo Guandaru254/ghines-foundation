@@ -1,9 +1,7 @@
 import React, { Fragment } from 'react';
 import NewHeader from '../../components/NewHeader/newheader.js'; // Corrected path assuming newheader.js is NewHeader.js
 import PageTitle from '../../components/pagetitle/PageTitle';
-import AboutS2 from '../../components/about2/about2';
-import ServiceSection2 from '../../components/ServiceSection2/ServiceSection2';
-import CtaSection from '../../components/CtaSection/CtaSection';
+import TeamSection from '../../components/TeamSection/TeamSection';
 import Footer from '../../components/footer/Footer';
 import Scrollbar from '../../components/scrollbar/scrollbar';
 
@@ -11,10 +9,8 @@ const AboutPage = () => {
     return (
         <Fragment>
             <NewHeader />
-            <PageTitle pageTitle={'About Us'} pagesub={'About'} />
-            <AboutS2 hclass={'about-section-s4 section-padding'} />
-            <ServiceSection2 hclass={'service-section-s2 section-padding pt-0'} />
-            <CtaSection hclass={'cta-section'} />
+            <PageTitle pageTitle={'Board of Directors'} pagesub={'About'} />
+            <TeamSection hclass={'volunteer-section section-padding'} />
             <Footer />
             <Scrollbar />
         </Fragment>

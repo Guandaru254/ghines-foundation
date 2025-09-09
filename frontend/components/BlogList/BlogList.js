@@ -5,7 +5,6 @@ import BlogSidebar from '../BlogSidebar/BlogSidebar'
 import blogs from '../../api/blogs'
 import Image from 'next/image';
 
-
 const ClickHandler = () => {
     window.scrollTo(10, 0);
 }
@@ -17,12 +16,14 @@ const BlogList = (props) => {
                 <div className="row">
                     <div className={`col col-lg-8 col-12 ${props.blRight}`}>
                         <div className="blog-content">
+                            {/* The map function will automatically display the latest stories from the blogs.js file */}
                             {blogs.slice(0, 3).map((blog, bitem) => (
-                                <div className={`post  ${blog.blClass}`} key={bitem}>
+                                <div className={`post ${blog.blClass}`} key={bitem}>
                                     <div className="entry-media">
                                         <Image src={blog.blogSingleImg} alt='' />
                                         <span>{blog.day}<br />
-                                            Feb</span>
+                                        {/* Updated month to be more flexible */}
+                                        {blog.month}</span>
                                     </div>
                                     <div className="entry-meta">
                                         <ul>
@@ -34,17 +35,12 @@ const BlogList = (props) => {
                                     </div>
                                     <div className="entry-details">
                                         <h3><Link onClick={ClickHandler} href={'/blog-single/[slug]'} as={`/blog-single/${blog.slug}`}>{blog.title2}</Link></h3>
-                                        <p>There are many variations of passages of Lorem Ipsum available, but majority have
-                                            suffered
-                                            teration in some form, by injected humour, or randomised words which don't look
-                                            even slight
-                                            believable. If you are going to use a passage of Lorem Ipsum.</p>
+                                        {/* Updated the placeholder paragraph with a brief from the brief */}
+                                        <p>This section will highlight Youth Voices, Project Spotlights, Cultural Snapshots, and Partner Features. Each post will be a unique story from the ground.</p>
                                         <Link onClick={ClickHandler} href={'/blog-single/[slug]'} as={`/blog-single/${blog.slug}`} className="read-more">READ MORE...</Link>
                                     </div>
                                 </div>
                             ))}
-
-
                             <div className="pagination-wrapper pagination-wrapper-left">
                                 <ul className="pg-pagination">
                                     <li>
@@ -68,9 +64,7 @@ const BlogList = (props) => {
                 </div>
             </div>
         </section>
-
     )
-
 }
 
 export default BlogList;
