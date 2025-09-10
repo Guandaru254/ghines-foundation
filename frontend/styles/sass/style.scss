@@ -156,3 +156,7 @@ Version:       1.0.0
 
 @import "page/_contact";
 @import "page/_error-404";
+
+
+@import 'resources'; /* Corrected path to import the partial */
+

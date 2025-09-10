@@ -21,23 +21,28 @@ const ServiceSection = (props) => {
     const ghinesServices = [
         {
             title: "SDG 3 – Good Health and Well-Being",
-            icon: "flaticon-bird" 
+            icon: "flaticon-bird",
+            description: "Through trauma healing, psychosocial support, mobile veterinary clinics, and integrated care services that protect both people and animals."
         },
         {
             title: "SDG 4 – Quality Education",
-            
+            icon: "flaticon-idea",
+            description: "By empowering youth through civic education, creative industry training, digital storytelling, and cultural preservation initiatives."
         },
         {
             title: "SDG 8 – Decent Work and Economic Growth",
-            icon: "flaticon-idea" 
+            icon: "flaticon-idea",
+            description: "Through job creation in eco-tourism, creative sectors, and conservation, particularly targeting youth and marginalised communities."
         },
-          {
+        {
             title: "SDG 15 – Life on Land",
-            icon: "flaticon-idea" 
+            icon: "flaticon-idea",
+            description: "Via wildlife protection, anti-poaching programs, animal welfare services, and environmental education rooted in local knowledge."
         },
-          {
+        {
             title: "SDG 16 – Peace, Justice and Strong Institutions",
-            icon: "flaticon-idea" 
+            icon: "flaticon-idea",
+            description: "By strengthening access to justice, community-based legal aid, governance reform, and reconciliation efforts in post-conflict areas."
         },
     ];
 
@@ -62,19 +67,18 @@ const ServiceSection = (props) => {
                         <div className="col-lg-5 col-12">
                             <div className="service-left">
                                 <ul>
-                                    {/* Using our new 'ghinesServices' array instead of the imported 'Services' */}
                                     {ghinesServices.map((Service, item) => (
                                         <li key={item}>
-                                            {/* Changed href to "#" to make the links non-functional */}
-                                            <Link onClick={ClickHandler} href="#" as="#"> 
-                                                <i className={Service.icon}></i>{Service.title}
-                                            </Link>
+                                            <div className="service-item-content">
+                                                <Link onClick={ClickHandler} href="#" as="#"> 
+                                                    <i className={Service.icon}></i>{Service.title}
+                                                </Link>
+                                                {Service.description && <p className="service-description">{Service.description}</p>}
+                                            </div>
                                         </li>
                                     ))}
                                 </ul>
-                                <div className="s-more">
-                                    <Link onClick={ClickHandler} href="/service">More Services</Link>
-                                </div>
+
                                 <div className="shape">
                                     <svg width="58" height="59" viewBox="0 0 58 59" fill="none">
                                         <path
@@ -90,9 +94,12 @@ const ServiceSection = (props) => {
                         <div className="col-lg-7 col-12">
                             <div className="service-image">
                                 <ul>
+                                    {/* Updated to display 5 image slots */}
                                     <li><Image src={Img4} alt="" /></li>
                                     <li><Image src={Img2} alt="" /></li>
                                     <li><Image src={Img3} alt="" /></li>
+                                    <li><Image src={Img1} alt="" /></li>
+                                    <li><Image src={Img4} alt="" /></li>
                                 </ul>
                             </div>
                         </div>

@@ -126,6 +126,12 @@
             padding: 15px 20px;
             border-bottom: 1px solid #ddd;
             width: 100%;
+            a { // Added this selector to specifically target links inside the mobile nav
+                color: #333333;
+                &:hover {
+                    color: #4A9FDA;
+                }
+            }
         }
         li:last-child {
             border-bottom: none;
@@ -135,21 +141,21 @@
 
 /* --- Hiding desktop elements on mobile and vice versa --- */
 @media (max-width: 768px) {
-  .desktopHeader {
-    display: none;
-  }
-  .mobileHeader {
-    display: flex;
-  }
+    .desktopHeader {
+        display: none;
+    }
+    .mobileHeader {
+        display: flex;
+    }
 }
 
 @media (min-width: 769px) {
-  .desktopHeader {
-    display: flex;
-  }
-  .mobileHeader {
-    display: none;
-  }
+    .desktopHeader {
+        display: flex;
+    }
+    .mobileHeader {
+        display: none;
+    }
 }
 
 /* --- Tablet styles (1024px and below, but above 768px) --- */

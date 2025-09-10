@@ -1,12 +1,11 @@
 import React, { Fragment } from 'react';
 import Link from 'next/link';
-import NewHeader from '../../components/NewHeader/newheader.js';
 import PageTitle from '../../components/pagetitle/PageTitle'
-import Footer from '../../components/footer/Footer';
 import Scrollbar from '../../components/scrollbar/scrollbar';
 import Logo from '/public/images/logo-2.svg'
 import causes from '../../api/causes';
 import Image from 'next/image';
+import Layout from '../../components/Layout/Layout';
 
 const CausesPage = () => {
     const ClickHandler = () => {
@@ -15,7 +14,6 @@ const CausesPage = () => {
 
     return (
         <Fragment>
-            <NewHeader/>
             <PageTitle pageTitle={'causes'} />
             <section className="cause-pg-section section-padding">
                 <div className="container">
@@ -60,7 +58,6 @@ const CausesPage = () => {
                     </div>
                 </div>
             </section>
-            <Footer />
             <Scrollbar />
 
         </Fragment>

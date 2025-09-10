@@ -1,6 +1,6 @@
-import Cimg1 from '/public/images/causes/1.jpg';
-import Cimg2 from '/public/images/causes/2.jpg';
-import Cimg3 from '/public/images/causes/3.jpg';
+import Cimg1 from '/public/images/mission-vission/1.jpg';
+import Cimg2 from '/public/images/mission-vission/2.jpg';
+import Cimg3 from '/public/images/mission-vission/3.jpg';
 import Cimg4 from '/public/images/causes/4.jpg';
 import Cimg5 from '/public/images/causes/5.jpg';
 import Cimg6 from '/public/images/causes/6.jpg';
@@ -9,7 +9,7 @@ import Cimg8 from '/public/images/causes/8.jpg';
 import Cimg9 from '/public/images/causes/9.jpg';
 import Cimg10 from '/public/images/causes/10.jpg';
 
-import Csing1 from '/public/images/cause-single/1.jpg'
+import Csing1 from '/public/images/mission-vission/1.jpg'
 import Csing2 from '/public/images/cause-single/2.jpg'
 import Csing3 from '/public/images/cause-single/3.jpg'
 import Csing4 from '/public/images/cause-single/4.jpg'

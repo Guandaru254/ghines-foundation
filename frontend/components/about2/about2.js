@@ -25,7 +25,7 @@ const AboutS2 = (props) => {
                     <div className="col-lg-6 col-12">
                         <div className="right-content">
                             {/* Updated title to reflect the foundation's name */}
-                            <h2>Welcome to Ghines Foundation</h2>
+                            <h2>Ghines Foundation Overview</h2>
                             {/* Incorporating Vision, Mission, and Tagline */}
                             <p>
                            The Ghines Foundation is a nonprofit organisation based in South Sudan, dedicated to 

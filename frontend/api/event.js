@@ -8,10 +8,6 @@ import esing2 from '/public/images/events-single/2.jpg'
 import esing3 from '/public/images/events-single/3.jpg'
 
 
-
-
-
-
 const event = [
     {
         id: '1',

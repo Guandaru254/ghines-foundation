@@ -14,6 +14,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Head from 'next/head'
+// Removed the duplicate import
+import Layout from '../components/Layout/Layout';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -23,7 +25,9 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
-          <Component {...pageProps} />
+          <Layout> {/* Now wraps every page */}
+            <Component {...pageProps} />
+          </Layout>
         </PersistGate>
       </Provider>
       <ToastContainer />
@@ -32,4 +36,4 @@ function MyApp({ Component, pageProps }) {
   )
 }
 
-export default MyApp
+export default MyApp;

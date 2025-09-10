@@ -63,7 +63,6 @@ const AboutS2 = (props) => {
                                 human rights reflects George’s vision for a South Sudan where people, nature, 
                                 and heritage thrive together.
                             </p>
-                            <p className="tagline"></p>
                         </div>
                     </div>
                 </div>

@@ -1,9 +1,7 @@
 import React, { Fragment } from 'react';
 import Link from "next/link";
 import Projects from "../../api/projects";
-import NewHeader from '../../components/NewHeader/newheader'; // Import your new header
 import PageTitle from '../../components/pagetitle/PageTitle'
-import Footer from '../../components/footer/Footer';
 import Scrollbar from '../../components/scrollbar/scrollbar';
 import Logo from '/public/images/logo-2.svg'
 import Image from 'next/image';
@@ -15,7 +13,6 @@ const ProjectPage = () => {
 
     return (
         <Fragment>
-            <NewHeader /> 
             <PageTitle pageTitle={'Gallery'} />
             <section className="project-page section-padding">
                 <div className="container">
@@ -37,7 +34,6 @@ const ProjectPage = () => {
                     </div>
                 </div>
             </section>
-            <Footer />
             <Scrollbar />
         </Fragment>
     )

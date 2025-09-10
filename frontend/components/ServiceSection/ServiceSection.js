@@ -63,9 +63,6 @@ const ServiceSection = (props) => {
                                         </li>
                                     ))}
                                 </ul>
-                                <div className="s-more">
-                                    <Link onClick={ClickHandler} href="/service">More Services</Link>
-                                </div>
                                 <div className="shape">
                                     <svg width="58" height="59" viewBox="0 0 58 59" fill="none">
                                         <path

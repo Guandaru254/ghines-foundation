@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import NewHeader from '../components/NewHeader/newheader'; // New header component imported
 import Hero from '../components/hero/hero';
 import PartnerSection from '../components/PartnerSection/PartnerSection';
 import FunFact from '../components/FunFact/FunFact';
@@ -13,14 +12,13 @@ import Testimonial from '../components/Testimonial/Testimonial';
 import ProcessSection from '../components/ProcessSection/ProcessSection';
 import InstagamSection from '../components/InstagamSection/InstagamSection';
 import BlogSection from '../components/BlogSection/BlogSection';
-import Footer from '../components/footer/Footer';
 import Scrollbar from '../components/scrollbar/scrollbar';
 import Logo from '/public/images/logo-2.svg';
+import Layout from '../components/Layout/Layout';
 
 const HomePage = () => {
     return (
         <Fragment>
-            <NewHeader /> 
             <Hero/>
             {/* <PartnerSection hclass={'partners-section'} /> */}
             {/* <FunFact /> */}
@@ -34,7 +32,6 @@ const HomePage = () => {
             {/* <ProcessSection /> */}
             {/* <InstagamSection hclass={'instagam-section section-padding pb-0'}/> */}
             {/* <BlogSection tClass={'blog-section section-padding'}/> */}
-            <Footer />
             <Scrollbar /> 
         </Fragment>
     )

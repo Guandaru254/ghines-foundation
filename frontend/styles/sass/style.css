@@ -4345,221 +4345,218 @@ img {
   opacity: 1;
   visibility: visible;
 }
-
 /* 3.6 service */
 .service-section {
-  position: relative;
-  z-index: 1;
+    position: relative;
+    z-index: 1;
 }
 .service-section .shape-1 {
-  position: absolute;
-  left: 0;
-  bottom: 30%;
-  z-index: -1;
-  animation: leafAniamtion 12s ease-in infinite;
+    position: absolute;
+    left: 0;
+    bottom: 30%;
+    z-index: -1;
+    animation: leafAniamtion 12s ease-in infinite;
 }
 .service-section .shape-2 {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
 }
 .service-section .section-title {
-  max-width: 630px;
-  margin-bottom: 0;
+    max-width: 630px;
+    margin-bottom: 0;
 }
 @media (max-width: 991px) {
-  .service-section .section-title {
-    text-align: center;
-    max-width: 100%;
-  }
+    .service-section .section-title {
+        text-align: center;
+        max-width: 100%;
+    }
 }
 .service-section .all-Service-btn {
-  text-align: right;
+    text-align: right;
 }
 @media (max-width: 991px) {
-  .service-section .all-Service-btn {
-    text-align: center;
-    margin-top: 20px;
-  }
+    .service-section .all-Service-btn {
+        text-align: center;
+        margin-top: 20px;
+    }
 }
 .service-section .service-wrap {
-  margin-top: 40px;
+    margin-top: 40px;
 }
 .service-section .service-left {
-  max-width: 486px;
-  border-radius: 11px;
-  background: #4A9FDA;
-  padding: 40px;
-  transition: all 0.3s ease-in-out;
-  position: relative;
-  z-index: 1;
+    max-width: 486px;
+    border-radius: 11px;
+    background: #4A9FDA;
+    padding: 40px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
 }
 @media (max-width: 1199px) {
-  .service-section .service-left {
-    padding: 30px 20px;
-  }
+    .service-section .service-left {
+        padding: 30px 20px;
+    }
 }
 @media (max-width: 991px) {
-  .service-section .service-left {
-    margin-bottom: 30px;
-  }
+    .service-section .service-left {
+        margin-bottom: 30px;
+    }
 }
 .service-section .service-left li {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    background: #4A9FDA;
+    position: relative;
+    transition: all 0.3s ease-in-out;
 }
 @media (max-width: 1199px) {
-  .service-section .service-left li {
-    margin-bottom: 20px;
-  }
+    .service-section .service-left li {
+        margin-bottom: 20px;
+    }
 }
 .service-section .service-left li:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
-.service-section .service-left li a {
-  border-radius: 10px;
-  background: #4A9FDA;
-  color: #0F0F2D;
-  font-family: "Nunito", sans-serif;
-  font-size: 18px;
-  font-weight: 800;
-  text-transform: capitalize;
-  display: block;
-  padding: 16px 40px;
-  display: flex;
-  align-items: center;
-  position: relative;
-  transition: all 0.3s ease-in-out;
+/* This is the new container for the content within each list item */
+.service-section .service-left li .service-item-content {
+    padding: 16px 40px; /* Applies padding to the content block */
 }
 @media (max-width: 1199px) {
-  .service-section .service-left li a {
-    padding: 10px 20px;
-  }
+    .service-section .service-left li .service-item-content {
+        padding: 10px 20px;
+    }
 }
 @media (max-width: 575px) {
-  .service-section .service-left li a {
-    padding: 10px 10px;
-    font-size: 15px;
-  }
+    .service-section .service-left li .service-item-content {
+        padding: 10px 10px;
+    }
+}
+/* Updated styles for the title link */
+.service-section .service-left li a {
+    color: #0F0F2D;
+    font-family: "Nunito", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+/* New styles for the descriptive text */
+.service-section .service-left li .service-description {
+    color: #0F0F2D;
+    font-family: "Nunito", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 10px;
 }
 .service-section .service-left li a::before {
-  position: absolute;
-  right: 30px;
-  top: 50%;
-  content: "\f123";
-  font-size: 20px;
-  font-family: flaticon_aidus !important;
-  transform: translateY(-50%);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.2s ease-in-out;
-  color: #4A9FDA;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    content: "\f123";
+    font-size: 20px;
+    font-family: flaticon_aidus !important;
+    transform: translateY(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+    color: #4A9FDA;
 }
 @media (max-width: 575px) {
-  .service-section .service-left li a::before {
-    right: 20px;
-    font-size: 17px;
-  }
+    .service-section .service-left li a::before {
+        right: 20px;
+        font-size: 17px;
+    }
 }
 .service-section .service-left li a i {
-  font-size: 25px;
-  color: #F74F22;
-  padding-right: 20px;
+    font-size: 25px;
+    color: #F74F22;
+    padding-right: 20px;
 }
 @media (max-width: 575px) {
-  .service-section .service-left li a i {
-    font-size: 18px;
-    padding-right: 15px;
-  }
+    .service-section .service-left li a i {
+        font-size: 18px;
+        padding-right: 15px;
+    }
 }
-.service-section .service-left li a:hover {
-  background: #4A9FDA;
-  color: #fff;
+/* Corrected hover effect to apply to the entire list item */
+.service-section .service-left li:hover {
+    background: #4A9FDA;
+    color: #fff;
 }
-.service-section .service-left li a:hover::before {
-  opacity: 1;
-  visibility: visible;
+.service-section .service-left li:hover a {
+    color: #fff;
 }
-.service-section .service-left li a:hover i {
-  color: #fff;
+.service-section .service-left li:hover a::before {
+    opacity: 1;
+    visibility: visible;
+}
+.service-section .service-left li:hover a i {
+    color: #fff;
 }
 .service-section .service-left li .active {
-  background: #4A9FDA;
-  color: #fff;
+    background: #4A9FDA;
+    color: #fff;
 }
 .service-section .service-left li .active::before {
-  opacity: 1;
-  visibility: visible;
+    opacity: 1;
+    visibility: visible;
 }
 .service-section .service-left li .active i {
-  color: #fff;
+    color: #fff;
 }
 .service-section .service-left .s-more {
-  display: block;
-  text-align: center;
-  margin-top: 40px;
+    display: block;
+    text-align: center;
+    margin-top: 40px;
 }
 @media (max-width: 1199px) {
-  .service-section .service-left .s-more {
-    margin-top: 20px;
-  }
+    .service-section .service-left .s-more {
+        margin-top: 20px;
+    }
 }
 .service-section .service-left .s-more a {
-  color: #0F0F2D;
-  font-family: "Nunito", sans-serif;
-  font-size: 16px;
-  font-weight: 800;
-  line-height: 29px;
+    color: #0F0F2D;
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 29px;
 }
 .service-section .service-left .shape {
-  position: absolute;
-  right: 67px;
-  bottom: 27px;
-  z-index: -1;
+    position: absolute;
+    right: 67px;
+    bottom: 27px;
+    z-index: -1;
 }
 @media (max-width: 575px) {
-  .service-section .service-left .shape {
-    display: none;
-  }
+    .service-section .service-left .shape {
+        display: none;
+    }
 }
+/* Adjusted image section layout to handle 5 images */
 .service-section .service-image ul {
-  margin: 0 -10px;
-}
-@media (max-width: 575px) {
-  .service-section .service-image ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
     margin: 0;
-  }
+    padding: 0;
 }
 .service-section .service-image ul li {
-  width: 49.7%;
-  display: inline-block;
-  padding: 0 10px;
-  position: relative;
-}
-@media (max-width: 1399px) {
-  .service-section .service-image ul li {
-    width: 49%;
-  }
-}
-@media (max-width: 575px) {
-  .service-section .service-image ul li {
-    width: 100%;
     padding: 0;
-    margin-bottom: 30px;
-  }
-}
-.service-section .service-image ul li img {
-  width: 100%;
-  border-radius: 14px;
+    width: auto;
+    display: block;
 }
 .service-section .service-image ul li:first-child {
-  width: 100%;
-  margin-bottom: 30px;
+    grid-column: span 2;
+    margin-bottom: 0;
 }
-@media (max-width: 575px) {
-  .service-section .service-image ul li:last-child {
-    margin-bottom: 0px;
-  }
+.service-section .service-image ul li img {
+    width: 100%;
+    border-radius: 14px;
 }
 
 /* 3.7 causes */

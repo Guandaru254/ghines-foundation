@@ -75,7 +75,7 @@ const NewHeader = () => {
                     <li><Link href="/about" onClick={closeMenu}>Who We Are</Link></li>
                     <li><Link href="/services" onClick={closeMenu}>Our Work</Link></li>
                     <li><Link href="/board" onClick={closeMenu}>Board of Directors</Link></li>
-                    <li><Link href="/gallery" onClick={closeMenu}>Resources</Link></li>
+                    <li><Link href="/resources" onClick={closeMenu}>Resources</Link></li>
                     <li><Link href="/gallery" onClick={closeMenu}>Gallery</Link></li>
                     <li><Link href="/blog-fullwidth" onClick={closeMenu}>News & Updates</Link></li>
                     <li><Link href="/contact" onClick={closeMenu}>Contact</Link></li>
