@@ -11,7 +11,7 @@ import blogImg9 from "/public/images/blog/img-5.jpg";
 import blogImg10 from "/public/images/blog/img-6.jpg";
 import blogImg11 from "/public/images/blog/img-7.jpg";
 
-import blogSingleImg1 from "/public/images/blog-details/1.jpg";
+import blogSingleImg1 from "/public/images/blog-details/1.webp";
 import blogSingleImg2 from "/public/images/blog-details/2.jpg";
 import blogSingleImg3 from "/public/images/blog-details/3.jpg";
 import blogSingleImg4 from "/public/images/blog-details/4.jpg";
