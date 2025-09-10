@@ -1,7 +1,9 @@
+// AboutS2.jsx
+
 import React from 'react';
 import Image from 'next/image';
 
-import About1 from '/public/images/about/ghines.jpg';
+import GhinesPhoto from '/public/images/about/ghines.jpg';
 
 const AboutS2 = (props) => {
     return (
@@ -9,30 +11,25 @@ const AboutS2 = (props) => {
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-6 col-12">
-                        <div className="about-image-container">
-                            <div className="about-image">
-                                <Image src={About1} alt="Ghines Foundation Introduction Image" width={500} height={350} style={{ borderRadius: '15px' }} />
-                            </div>
-                            {/* The final, fine-tuned caption positioning */}
-                            <p style={{
-                                textAlign: 'left',
-                                position: 'relative',
-                                left: '80%',
-                                transform: 'translateX(-55%)', // This is the key change
-                                marginTop: '10px',
-                                fontFamily: 'Georgia, serif',
-                                fontSize: '1em',
-                                color: '#555',
-                                fontStyle: 'italic',
-                                fontWeight: 'normal',
-                                display: 'block'
-                            }}>Mr. Nicholas Ghines</p>
-                        </div>
+                        {/* The fix is to use a semantic figure and figcaption */}
+                        <figure className="about-image-figure">
+                            <Image
+                                src={GhinesPhoto}
+                                alt="Ghines Foundation Introduction Image"
+                                width={500}
+                                height={350}
+                                style={{ borderRadius: '15px' }}
+                            />
+                            <figcaption className="about-image-caption">
+                                Mr. Nicholas Ghines
+                            </figcaption>
+                        </figure>
                     </div>
                     <div className="col-lg-6 col-12">
                         <div className="right-content">
                             <h2>The Ghines Legacy</h2>
-                            <p>The story of the Ghines family in South Sudan begins more than a century ago. 
+                            <p>
+                                The story of the Ghines family in South Sudan begins more than a century ago. 
                                 In 1896, members of the family left Ottoman-occupied Greece and made their way to Sudan,
                                 a land that, at the time, shared the same empire as northern Greece. Years later, after 
                                 serving in the North African campaigns of World War II, Nicholas C. Ghines returned to Sudan 
@@ -69,6 +66,6 @@ const AboutS2 = (props) => {
             </div>
         </section>
     );
-}
+};
 
 export default AboutS2;

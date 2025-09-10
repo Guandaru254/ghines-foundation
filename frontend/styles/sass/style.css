@@ -3896,6 +3896,9 @@ img {
 
 /*3.4 about */
 .about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   z-index: 1;
   background: url("../../images/about/about-bg.jpg") center center/cover no-repeat;
@@ -4054,9 +4057,78 @@ img {
   font-weight: 500;
   line-height: 30px;
 }
-.about-section .about-image {
-  position: relative;
+/* Add this to your global stylesheet */
+.about-image {
+    position: relative;
+    /* Resetting the default margin to fix spacing issues */
+    margin: 0;
 }
+/* Add this to your main CSS file */
+.about-image-figure {
+  margin: 0; /* Remove default margin */
+  text-align: center; /* Center the image and caption */
+}
+
+.about-image-caption {
+  font-family: 'Georgia', serif;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: normal;
+  color: #555;
+  margin-top: 500px; /* Adjust spacing to move it closer to the image */
+  margin-left: 50px; /* Keep this if you want space below the whole image block */
+}
+/* Add this to your main stylesheet */
+
+/* Mobile-first CSS for screens up to 768px */
+@media (max-width: 768px) {
+    .about-image-figure {
+        margin: 0;
+        padding: 0;
+        text-align: left; /* Aligns the caption to the left */
+    }
+
+    .about-image-figure img {
+        /* Makes the image fluid and responsive on mobile */
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-bottom: 20px; /* Provides space below the image */
+    }
+    
+    .about-image-caption {
+        /* Positions the name correctly */
+        font-family: 'Helvetica Neue', 'Arial', sans-serif; /* Use a modern, readable font */
+        font-size: 1em;
+        font-style: italic;
+        font-weight: normal;
+        color: #555;
+        margin-top: 10px; /* Adjust spacing to move it closer to the image */
+        margin-left: 0; /* Ensures the text is left-aligned */
+        margin-bottom: 50px;
+    }
+}
+.about-image img {
+    /* Set explicit dimensions and display properties for the image */
+    width: 100%;
+    max-width: 500px; /* or your preferred max width */
+    height: auto;
+    display: block;
+    border-radius: 15px;
+}
+
+@media (max-width: 991px) {
+    .about-image {
+        margin-bottom: 30px; /* Add some space on smaller screens if needed */
+    }
+}
+.about-section .about-image img {
+  .about-section .about-image {
+  height: auto;
+  margin: 0;
+}
+}
+
 .about-section .about-image .img-1 {
   width: 633px;
   height: 575px;
@@ -4175,6 +4247,256 @@ img {
     display: none;
   }
 }
+
+/* Add this to your main stylesheet, e.g., styles/globals.css */
+/* Core Pillars Section Styles (Updated for a Modern, Sleek Look) */
+.MV-section {
+    padding: 80px 0;
+}
+
+.MV-section .section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.MV-section .card-mv {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.MV-section .card-mv:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.MV-section .card-mv > div:first-child {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.MV-section .card-mv img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.MV-section .card-mv:hover img {
+    transform: scale(1.05);
+}
+
+.MV-section .card-mv::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+}
+
+.MV-section .card-mv .icon {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    z-index: 3;
+    transition: all .4s ease-in-out;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MV-section .card-mv .icon i {
+    color: #000;
+    font-size: 2rem;
+}
+
+.MV-section .card-mv .text {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    z-index: 3;
+    transition: all .4s ease-in-out;
+}
+
+.MV-section .card-mv .text h2 {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    line-height: 1.2;
+}
+
+.MV-section .card-mv .text a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease-in-out;
+}
+
+.MV-section .card-mv .text a:hover {
+    color: #f7b731; /* A subtle hover color */
+}
+
+.MV-section .card-mv:hover .icon,
+.MV-section .card-mv:hover .text {
+    transform: translateY(-15px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .MV-section .card-mv {
+        height: 250px;
+    }
+}
+
+/* --- New styles for individual pillar pages --- */
+/* --- Individual Pillar Page Styles (Sleek & Professional) --- */
+.section-padding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.pillar-details {
+    /* Container for the new layout */
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.pillar-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333333; /* Dark gray for a professional look */
+}
+
+.pillar-image-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pillar-content-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555555;
+}
+
+/* Hero section for individual pages */
+.event-single-hero {
+    position: relative;
+    height: 400px; /* Adjust as needed */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.event-single-hero .hero-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Puts the image behind the content */
+}
+
+.event-single-hero .hero-background-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+}
+
+.event-single-hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+/* Main Content Section */
+.event-single-details {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.event-single-details .event-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.event-single-details .event-details-text {
+    margin-top: 20px;
+}
+
+.event-single-details .event-details-text h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Sidebar Styling */
+.event-sidebar {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.event-sidebar .widget {
+    margin-bottom: 30px;
+}
+
+.event-sidebar .widget-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.event-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.event-sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.event-sidebar ul li a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.2s;
+}
+
+.event-sidebar ul li a:hover {
+    color: #0056b3;
+}
+
+
+
+
 
 .video-btn {
   width: 85px;

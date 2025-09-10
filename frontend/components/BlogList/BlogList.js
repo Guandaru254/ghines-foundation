@@ -1,13 +1,10 @@
+// components/BlogList/BlogList.jsx
+
 import React from 'react';
-import Link from 'next/link'
-import BlogSidebar from '../BlogSidebar/BlogSidebar'
-
-import blogs from '../../api/blogs'
+import Link from 'next/link';
+import BlogSidebar from '../BlogSidebar/BlogSidebar';
+import blogs from '../../api/blogs';
 import Image from 'next/image';
-
-const ClickHandler = () => {
-    window.scrollTo(10, 0);
-}
 
 const BlogList = (props) => {
     return (
@@ -16,44 +13,32 @@ const BlogList = (props) => {
                 <div className="row">
                     <div className={`col col-lg-8 col-12 ${props.blRight}`}>
                         <div className="blog-content">
-                            {/* The map function will automatically display the latest stories from the blogs.js file */}
                             {blogs.slice(0, 3).map((blog, bitem) => (
                                 <div className={`post ${blog.blClass}`} key={bitem}>
                                     <div className="entry-media">
                                         <Image src={blog.blogSingleImg} alt='' />
                                         <span>{blog.day}<br />
-                                        {/* Updated month to be more flexible */}
                                         {blog.month}</span>
                                     </div>
                                     <div className="entry-meta">
                                         <ul>
-                                            <li><i className="fi flaticon-user"></i> By <Link onClick={ClickHandler} href={'/blog-single/[slug]'} as={`/blog-single/${blog.slug}`}>{blog.author}</Link> </li>
-                                            <li><i className="fi flaticon-clock"></i><Link onClick={ClickHandler} href={'/blog-single/[slug]'} as={`/blog-single/${blog.slug}`}>3 min Read</Link>
-                                            </li>
+                                            <li><i className="fi flaticon-user"></i> By <span>{blog.author}</span> </li>
+                                            <li><i className="fi flaticon-clock"></i><span>3 min Read</span></li>
                                         </ul>
                                     </div>
                                     <div className="entry-details">
-                                        <h3><Link onClick={ClickHandler} href={'/blog-single/[slug]'} as={`/blog-single/${blog.slug}`}>{blog.title2}</Link></h3>
-                                        {/* Updated the placeholder paragraph with a brief from the brief */}
-                                        <Link onClick={ClickHandler} href={'/blog-single/[slug]'} as={`/blog-single/${blog.slug}`} className="read-more">READ MORE...</Link>
+                                        <h3><a href="#">{blog.title2}</a></h3>
+                                        <a href="#" className="read-more">READ MORE...</a>
                                     </div>
                                 </div>
                             ))}
                             <div className="pagination-wrapper pagination-wrapper-left">
                                 <ul className="pg-pagination">
-                                    <li>
-                                        <Link href="/blog-left-sidebar" aria-label="Previous">
-                                            <i className="fi ti-angle-left"></i>
-                                        </Link>
-                                    </li>
-                                    <li className="active"><Link href="/blog-left-sidebar">1</Link></li>
-                                    <li><Link href="/blog-left-sidebar">2</Link></li>
-                                    <li><Link href="/blog-left-sidebar">3</Link></li>
-                                    <li>
-                                        <Link href="/blog-left-sidebar" aria-label="Next">
-                                            <i className="fi ti-angle-right"></i>
-                                        </Link>
-                                    </li>
+                                    <li><a href="#" aria-label="Previous"><i className="fi ti-angle-left"></i></a></li>
+                                    <li className="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#" aria-label="Next"><i className="fi ti-angle-right"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -62,7 +47,7 @@ const BlogList = (props) => {
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
 export default BlogList;
