@@ -37,7 +37,7 @@ const NewHeader = () => {
                     <li><Link href="/about">Who We Are</Link></li>
                     <li><Link href="/services">Our Work</Link></li>
                     <li><Link href="/board">Board of Directors</Link></li>
-                    <li><Link href="/gallery">Resources</Link></li>
+                    <li><Link href="/resources">Resources</Link></li>
                     <li><Link href="/gallery">Gallery</Link></li>
                     <li><Link href="/blog-fullwidth">News & Updates</Link></li>
                     <li><Link href="/contact">Contact</Link></li>
