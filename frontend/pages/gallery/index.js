@@ -20,15 +20,6 @@ const ProjectPage = () => {
                         {Projects.slice(0, 6).map((project, pitem) => (
                             <div className="project-grid" key={pitem}>
                                 <Image src={project.pimg1} alt="" />
-                                <div className="content">
-                                    <div>
-                                        <h2><Link onClick={ClickHandler} href={'/project-single/[slug]'} as={`/project-single/${project.slug}`}>{project.title}</Link></h2>
-                                        <span>{project.subtitle}</span>
-                                    </div>
-                                    <div>
-                                        <div className="icon"><Link onClick={ClickHandler} href={'/project-single/[slug]'} as={`/project-single/${project.slug}`}><i className="flaticon-right-arrow"></i></Link></div>
-                                    </div>
-                                </div>
                             </div>
                         ))}
                     </div>
